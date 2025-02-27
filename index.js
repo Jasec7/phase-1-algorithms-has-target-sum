@@ -1,16 +1,34 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return true;
+      }
+    }
+  }
+  return false;
+
 }
 
 /* 
   Write the Big O time complexity of your function here
 */
-
+//0(n2)
 /* 
   Add your pseudocode here
 */
-
+/*  function hasTargetSum(array, target) {
+for each i index 0 to length -1
+for each j index from i + 1 to length
+if i + j === target,
+return true;
+else 
+return false
+} //*
 /*
+I wasn't 100% sure but i new you could use a for loop with a nested loop and 
+then add a conditional statement.
   Add written explanation of your solution here
 */
 
